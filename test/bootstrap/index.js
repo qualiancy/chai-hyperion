@@ -4,6 +4,7 @@
 
 global.chai = require('chai');
 global.should = global.chai.should();
+global.hyperion = require('hyperion');
 
 /*!
  * Chai Plugins
@@ -16,20 +17,4 @@ global.should = global.chai.should();
  * Import project
  */
 
-global.chai-hyperion = require('../..');
-
-/*!
- * Helper to load internals for cov unit tests
- */
-
-function req (name) {
-  return process.env.chai-hyperion_COV
-    ? require('../../lib-cov/chai-hyperion/' + name)
-    : require('../../lib/chai-hyperion/' + name);
-}
-
-/*!
- * Load unexposed modules for unit tests
- */
-
-global.__chai-hyperion = {};
+global.chai.use(require('../..'));

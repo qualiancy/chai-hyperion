@@ -18,9 +18,11 @@
       "test": "mocha"
     }
   , "dependencies": {
+        "chai-http": "*"
     }
   , "devDependencies": {
         "chai": "*"
       , "mocha": "*"
+      , "hyperion": "0.0.x"
     }
 }

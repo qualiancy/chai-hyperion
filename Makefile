@@ -8,7 +8,7 @@ test:
 		$(TESTS)
 
 test-cov: lib-cov
-	@chai-hyperion_COV=1 $(MAKE) test REPORTER=html-cov > coverage.html
+	@chaiHyperion_COV=1 $(MAKE) test REPORTER=html-cov > coverage.html
 
 lib-cov: clean
 	@jscoverage lib lib-cov
